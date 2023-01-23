@@ -1,6 +1,6 @@
 from sys import intern
 
-# 字串中有空白者不intern
+# # 字串中有空白者不intern
 # name1 = '  Alex   Van is a Pythonista.   '
 # name2 = '  Alex   Van is a Pythonista.   '
 
@@ -55,14 +55,14 @@ from sys import intern
 # ======================================================
 
 # 長度超過4,096個字元的字串不intern
-leng = 4097
-str1 = 'A' * leng    # 連用5個4_096，何以不用變數？
-str2 = 'A' * leng    # Alex是否功力大退？
-str3 = 'A' * leng    # 當然不是。
-str4 = 'A' * leng    # 請耐心看下去，自然明白。
-str5 = 'A' * leng
-print(f'{id(str1)=:<20}{id(str2)=:<20}{id(str3)=:<20}{id(str4)=:<20}{id(str5)=}')
-print(f'{(id(str1) == id(str2) == id(str3) == id(str4) == id(str5)) = }')
+# leng = 4097
+# str1 = 'A' * 4097    # 連用5個4_096，何以不用變數？
+# str2 = 'A' * 4097    # Alex是否功力大退？
+# str3 = 'A' * 4097    # 當然不是。
+# str4 = 'A' * 4097    # 請耐心看下去，自然明白。
+# str5 = 'A' * 4097
+# print(f'{id(str1)=:<20}{id(str2)=:<20}{id(str3)=:<20}{id(str4)=:<20}{id(str5)=}')
+# print(f'{(id(str1) == id(str2) == id(str3) == id(str4) == id(str5)) = }')
 
 # -------------------
 # 改用intern()函數。
@@ -103,12 +103,12 @@ print(f'{(id(str1) == id(str2) == id(str3) == id(str4) == id(str5)) = }')
 # print(f'{(id(num1) == id(num2)) = }')
 
 # print()
-# num1 = -6**99
-# num2 = -6**99
-# print(f'{num1 = }\t\t{num2 = }')
-# print(f'{id(num1) = :<20}{id(num2) = }')
-# print(f'{(id(num1) == id(num2)) = }')
-
+num1 = -6**19
+num2 = -6**19
+print(f'{num1 = }\t\t{num2 = }')
+print(f'{id(num1) = :<20}{id(num2) = }')
+print(f'{(id(num1) == id(num2)) = }')
+print(f'{num1 is num2 = }')
 # print()
 # num1 = 256
 # num2 = 256
